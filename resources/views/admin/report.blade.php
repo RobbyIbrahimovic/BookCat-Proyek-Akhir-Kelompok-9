@@ -3,7 +3,7 @@
 @section('title', 'Laporan Penjualan (Sales Report)')
 
 @section('content')
-    {{-- Header Laporan --}}
+    {{-- headder laporan --}}
     <div class="rounded-3xl bg-[#477A25] text-[#E3EE9D] p-6 sm:p-8 mb-8 shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4 print-shadow-none">
         <div>
             <h1 class="font-brand text-3xl text-[#E3EE9D]">Laporan Penjualan BookCat</h1>
@@ -17,7 +17,7 @@
         </button>
     </div>
 
-    {{-- Form Filter Laporan --}}
+    {{-- form filter --}}
     <div class="no-print rounded-3xl bg-[#B5D352] border border-[#477A25]/40 p-6 mb-8">
         <form action="{{ route('admin.report') }}" method="GET" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
             <div>
@@ -58,7 +58,7 @@
         </form>
     </div>
 
-    {{-- Ringkasan KPI Laporan --}}
+    {{-- ringkasan statistiklaporan --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
         <div class="rounded-3xl bg-[#B5D352] border border-[#477A25]/30 p-5 print-shadow-none">
             <p class="text-xs font-bold uppercase text-[#2C5918]/80">Total Transaksi</p>
@@ -78,7 +78,7 @@
         </div>
     </div>
 
-    {{-- Tabel Detail Penjualan --}}
+    {{-- tbl detail penjualan --}}
     <div class="rounded-3xl bg-[#B5D352] border border-[#477A25]/40 p-6 sm:p-8 print-shadow-none">
         <div class="overflow-x-auto rounded-2xl bg-[#E3EE9D] border border-[#477A25]/30">
             <table class="w-full text-left border-collapse">

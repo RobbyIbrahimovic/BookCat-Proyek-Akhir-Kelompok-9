@@ -25,11 +25,9 @@
 </head>
 <body class="min-h-screen flex flex-col justify-between">
 
-    {{-- Top Navbar ala BookCat --}}
     <header class="no-print sticky top-0 z-40 bg-[#E3EE9D]/95 backdrop-blur border-b border-[#477A25]/25">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
-            {{-- logo BookCat --}}
             <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 rounded-xl bg-[#477A25] text-[#E3EE9D] flex items-center justify-center shadow-sm group-hover:scale-105 transition">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
@@ -44,7 +42,7 @@
                 </div>
             </a>
 
-            {{-- Navigasi Admin --}}
+            {{-- navigasi --}}
             <nav class="flex items-center gap-2 sm:gap-6">
                 <a href="{{ route('admin.dashboard') }}"
                    class="px-4 py-2 rounded-full text-sm font-semibold transition {{ request()->routeIs('admin.dashboard') || request()->routeIs('admin.menus.*') ? 'bg-[#477A25] text-[#E3EE9D]' : 'text-[#2C5918] hover:bg-[#B5D352]/60' }}">
@@ -62,7 +60,7 @@
         </div>
     </header>
 
-    {{-- Konten Utama --}}
+    {{-- utama --}}
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
         @if(session('success'))
             <div class="no-print mb-6 px-5 py-4 rounded-2xl bg-[#2C5918] text-[#E3EE9D] font-medium flex items-center justify-between shadow-md">
@@ -77,7 +75,7 @@
         @yield('content')
     </main>
 
-    {{-- Footer --}}
+    {{-- footer --}}
     <footer class="no-print max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pb-8">
         <div class="rounded-3xl bg-[#2C5918] text-[#E3EE9D] px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>

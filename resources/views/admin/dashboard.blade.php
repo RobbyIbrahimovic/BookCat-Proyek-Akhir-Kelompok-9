@@ -3,7 +3,7 @@
 @section('title', 'Dashboard Admin')
 
 @section('content')
-    {{-- Banner Header Deep Matcha --}}
+    {{-- header --}}
     <div class="rounded-3xl bg-[#477A25] text-[#E3EE9D] p-6 sm:p-8 mb-8 shadow-md flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div>
             <span class="inline-block px-3.5 py-1 rounded-full text-xs font-semibold border border-[#E3EE9D]/40 mb-3">
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    {{-- Kartu Ringkasan Statistik --}}
+    {{-- ringkasan statistik --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
         <div class="rounded-3xl bg-[#B5D352] border border-[#477A25]/30 p-5">
             <p class="text-xs font-bold uppercase tracking-wider text-[#2C5918]/80">Total Katalog Menu</p>
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    {{-- SECTION 1: MANAJEMEN KATALOG MENU (CRUD) --}}
+    {{-- manjemen menu catring(crud) --}}
     <section class="rounded-3xl bg-[#B5D352] border border-[#477A25]/40 p-6 sm:p-8 mb-10 shadow-sm">
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div>
@@ -56,7 +56,7 @@
                 <p class="text-sm text-[#2C5918]/85">Menu berlabel <strong>Recommended</strong> akan tampil di halaman depan website.</p>
             </div>
 
-            {{-- Form Pencarian Menu --}}
+            {{-- form pencarian --}}
             <form action="{{ route('admin.dashboard') }}" method="GET" class="flex items-center gap-2">
                 <input type="text" name="search" value="{{ $search }}" placeholder="Cari nama menu..."
                        class="px-4 py-2 rounded-full bg-[#E3EE9D] border border-[#477A25]/40 text-sm text-[#1F3D11] placeholder-[#2C5918]/60 focus:outline-none focus:ring-2 focus:ring-[#2C5918]">
@@ -145,7 +145,7 @@
         </div>
     </section>
 
-    {{-- SECTION 2: MONITORING & UPDATE STATUS PESANAN MASUK --}}
+    {{-- monitoring & update status pesanan msk --}}
     <section class="rounded-3xl bg-[#B5D352] border border-[#477A25]/40 p-6 sm:p-8 shadow-sm">
         <div class="mb-6">
             <h2 class="font-brand text-2xl sm:text-3xl text-[#2C5918]">Daftar Pesanan Masuk</h2>
